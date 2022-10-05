@@ -19,7 +19,6 @@ export default async function handler(req, res) {
     const fileStr = req.body.data;
 
     if (req.method === 'POST') {
-        
         try {
             const uploadedResponse = await cloudinary.uploader.upload_large(fileStr, {
                 resource_type: "video",
